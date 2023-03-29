@@ -1,32 +1,44 @@
-# Prerequisites
-*.d
+public class CollectionSorter
+{
+    // Sorts an array of integers in ascending or descending order
+    public int[] Sort(int[] array, bool ascending = true)
+    {
+        if (ascending)
+            Array.Sort(array);
+        else
+            Array.Sort(array, (a, b) => b.CompareTo(a));
+        return array;
+    }
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+    // Sorts an array of doubles in ascending or descending order
+    public double[] Sort(double[] array, bool ascending = true)
+    {
+        if (ascending)
+            Array.Sort(array);
+        else
+            Array.Sort(array, (a, b) => b.CompareTo(a));
+        return array;
+    }
 
-# Precompiled Headers
-*.gch
-*.pch
+    // Sorts an array of chars in ascending or descending order
+    public char[] Sort(char[] array, bool ascending = true)
+    {
+        if (ascending)
+            Array.Sort(array);
+        else
+            Array.Sort(array, (a, b) => b.CompareTo(a));
+        return array;
+    }
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    // Sorts a string in ascending or descending order
+    public string Sort(string str, bool ascending = true)
+    {
+        char[] chars = str.ToCharArray();
+        if (ascending)
+            Array.Sort(chars);
+        else
+            Array.Sort(chars, (a, b) => b.CompareTo(a));
+        return new string(chars);
+    }
+}
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
